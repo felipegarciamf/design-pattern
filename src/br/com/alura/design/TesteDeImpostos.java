@@ -5,7 +5,7 @@ public class TesteDeImpostos {
 	public static void main(String[] args) {
 		
 		
-		Imposto iss = new ISS();
+		Imposto iss = new ISS(new ICMS());
 		Imposto icms = new ICMS();
 		Imposto ipva = new IPVA();
 		Imposto iccc = new ICCC();

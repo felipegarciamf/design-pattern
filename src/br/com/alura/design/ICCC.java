@@ -1,6 +1,15 @@
 package br.com.alura.design;
 
-public class ICCC implements Imposto {
+public class ICCC extends Imposto {
+	
+	
+	public ICCC(Imposto outroImposto) {
+		super(outroImposto);
+	}
+	
+	public ICCC() {
+		// TODO Auto-generated constructor stub
+	}
 
 	@Override
 	public double calcula(Orcamento orcamento) {
