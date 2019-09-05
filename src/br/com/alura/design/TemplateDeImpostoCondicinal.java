@@ -2,6 +2,15 @@ package br.com.alura.design;
 
 public abstract class TemplateDeImpostoCondicinal extends Imposto{
 
+	public TemplateDeImpostoCondicinal(Imposto outroImposto) {
+		super(outroImposto);
+	}
+	
+	public TemplateDeImpostoCondicinal() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	
 	@Override
 	public final double calcula(Orcamento orcamento) {
 		if(deveUsarMaximaTaxacao(orcamento)) {

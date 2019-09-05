@@ -1,5 +1,7 @@
 package br.com.alura.design;
 
+import java.util.Calendar;
+
 public class Conta {
 	
 	private String titular;
@@ -7,9 +9,9 @@ public class Conta {
 	private String agencia;
 	private String conta;
 	private String numeroConta;
-
+	private Calendar dataAbertura;
+	
 	public Conta() {
-		
 	}
 	
 	public Conta(double saldo) {
@@ -27,6 +29,16 @@ public class Conta {
 		this.agencia = agencia;
 		this.conta = conta;
 		this.numeroConta = numeroConta;
+	}
+	
+	
+	public Conta(String titular, double saldo, String agencia, String conta, String numeroConta, Calendar dataAbertura) {
+		this.titular = titular;
+		this.saldo = saldo;
+		this.agencia = agencia;
+		this.conta = conta;
+		this.numeroConta = numeroConta;
+		this.dataAbertura = dataAbertura;
 	}
 
 	public void deposita(double saldo) {
@@ -49,11 +61,12 @@ public class Conta {
 		return conta;
 	}
 	
-
 	public String getNumeroConta() {
 		return numeroConta;
 	}
-
-
+	
+	public Calendar getDataAbertura() {
+		return dataAbertura;
+	}
 
 }
