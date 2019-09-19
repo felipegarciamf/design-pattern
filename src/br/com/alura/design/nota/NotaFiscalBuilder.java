@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
-public class CriadorDeNotaFiscal {
+public class NotaFiscalBuilder {
 
 	
 	private String razaoSocial;
@@ -16,26 +16,31 @@ public class CriadorDeNotaFiscal {
 	private Calendar data;
 	
 
-	public void paraEmpresa(String razaoSocial) {
+	public NotaFiscalBuilder paraEmpresa(String razaoSocial) {
 		this.razaoSocial = razaoSocial;
+		return this;
 	}
 	
-	public void comCNPJ(String cnpj) {
+	public NotaFiscalBuilder comCNPJ(String cnpj) {
 		this.cnpj = cnpj;
+		return this;
 	}
 	
-	public void comItem(ItemDatNota item) {
+	public NotaFiscalBuilder comItem(ItemDatNota item) {
 		todosItens.add(item);
 		valorBruto += item.getValor();
 		impostos += item.getValor() * 0.05;
+		return this;
 	}
 	
-	public void comObservacoes(String observacao) {
+	public NotaFiscalBuilder comObservacoes(String observacao) {
 		this.observacoes = observacoes;
+		return this;
 	}
 	
-	public void dataDeHoje() {
+	public NotaFiscalBuilder dataDeHoje() {
 		this.data = Calendar.getInstance();
+		return this;
 	}
 	
 	public NotaFiscal constroi() {
