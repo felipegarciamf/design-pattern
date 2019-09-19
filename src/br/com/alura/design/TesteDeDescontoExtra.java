@@ -11,12 +11,11 @@ public class TesteDeDescontoExtra {
 		System.out.println(reforma.getValor());
 		
 		reforma.aprova();
-		
+	
 		reforma.aplicaDescontoExtra();
 		System.out.println(reforma.getValor());
 		
-		reforma.finaliza();
-		reforma.aplicaDescontoExtra();
+	
 	}
 	
 }
